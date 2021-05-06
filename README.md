@@ -7,19 +7,10 @@
 
 ![Routes](./Routes.png)
 
-  - `http :3000/api/v1/register name=oksana0 password=foobar`
-  - `curl -d '{"username":"oksana1", "password":"123456"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/v1/register`
-
- - "curl --location --request POST 'http://localhost:3000/api/v1/register' \
---data-raw '{
-    "user": {
-  "username": "oksana3",
-  "password": "Password"
- }
-}'"
-
-curl --location --request POST 'http://localhost:3000/api/v1/login' \
---data-raw '{
-   "username": "Oksana",
-   "password": "111111"
-}'
+ #### POSTMAN:
+ - POST `http://localhost:3000/api/v1/login` for User created in database
+ - {
+    "id": 1,
+    "username": "Oksana",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MjA0MTE4NTN9.UCfBHyZ8CXKzSA0l4yjk4mUDR7NvlD5A2XP9bHYaKNY"
+}

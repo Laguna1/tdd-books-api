@@ -4,8 +4,10 @@ module Api
   module V1
     class AuthenticationController < ApplicationController
       class AuthenticateError < StandardError; end
+
       rescue_from ActionController::ParameterMissing, with: :parameter_missing
       rescue_from AuthenticateError, with: :handle_unauthenticated
+
       def create
         if user
           raise AuthenticateError unless user.authenticate(params.require(:password))

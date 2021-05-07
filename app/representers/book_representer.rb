@@ -9,7 +9,7 @@ class BookRepresenter
     {     id: book.id,
           title: book.title,
           author: book.author,
-          category: Category.find(book.id).name,
+          category: Category.find(book.category.id).name,
           date_added: book.created_at }
   end
 

@@ -4,7 +4,7 @@ module Api
   module V1
     class BooksController < ApplicationController
       before_action :set_book, only: %i[update show destroy]
-      
+
       # GET /books
       def index
         @books = Book.all

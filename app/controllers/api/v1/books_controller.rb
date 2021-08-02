@@ -30,7 +30,7 @@ module Api
       # PUT /books/:id
       def update
         @book.update(book_params)
-        head :no_content
+        render json: BookRepresenter.new(@book).as_json
       end
 
       # DELETE /books/:id
